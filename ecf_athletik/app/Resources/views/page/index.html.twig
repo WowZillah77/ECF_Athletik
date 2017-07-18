@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br>
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="orbit" role="region" aria-label="Running" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;"  >
+                <div class="orbit-wrapper">
+
+                    <ul class="orbit-container">
+                        <li class="is-active orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="{{ asset('img/1.jpg') }}">
+                                <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="{{ asset('img/2.jpeg') }}">
+                                <figcaption class="orbit-caption">Lets Rocket!</figcaption>
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="{{ asset('img/3.jpg') }}">
+                                <figcaption class="orbit-caption">Encapsulating</figcaption>
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="{{ asset('img/4.jpg') }}">
+                                <figcaption class="orbit-caption">Outta This World</figcaption>
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="{{ asset('img/5.jpg') }}">
+                                <figcaption class="orbit-caption">Outta This World</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="large-4 columns">
+            <img src="{{ asset('img/6.jpg') }}"/>
+            <h4> intergénérationnelle</h4>
+            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+        </div>
+        <div class="large-4 columns">
+            <img src="{{ asset('img/7.jpg') }}"/>
+            <h4>Cure de Jouvence</h4>
+            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+        </div>
+        <div class="large-4 columns">
+            <img src="{{ asset('img/8.jpg') }}"/>
+            <h4>Fun</h4>
+            <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
