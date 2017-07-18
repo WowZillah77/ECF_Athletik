@@ -23,16 +23,28 @@
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li ><a class="menu-text" href="#">HOME</a></li>
-                    <li><a href="#">Connexion</a></li>
-                    <li><a href="#">register</a></li>
-                    <li>
-                        <a href="#">resultat</a>
-                        <ul class="menu vertical">
-                            <li><a href="#">par course</a></li>
-                            <li><a href="#">classement general</a></li>
-                            <li><a href="#">m'inscrire</a></li>
-                        </ul>
-                    </li>
+                    {% if app.user %}
+                        <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
+                        <li><a href="#">m'inscrire à une course</a></li>
+                        <li>
+                            <a href="#">resultat</a>
+                            <ul class="menu vertical">
+                                <li><a href="#">par course</a></li>
+                                <li><a href="#">classement general</a></li>
+                            </ul>
+                        </li>
+                    {%  else %}
+                        <li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
+                        <li><a href="{{ path('fos_user_registration_register') }}">register</a></li>
+                        <li>
+                            <a href="#">resultat</a>
+                            <ul class="menu vertical">
+                                <li><a href="#">par course</a></li>
+                                <li><a href="#">classement general</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+
 
                 </ul>
             </div>
