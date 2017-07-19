@@ -1,0 +1,4 @@
+{% for course in menucourse %}
+    <li><a href="{{ path('resultatCourse', {'id':course.id }) }}">{{ course.name }}</a>
+    </li>
+{% endfor %}

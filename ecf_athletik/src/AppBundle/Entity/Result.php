@@ -55,6 +55,86 @@ class Result
      */
     private $meeting;
 
+    /**
+     * @return float
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * @param float $time
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPoints()
+    {
+        return $this->points;
+    }
+
+    /**
+     * @param int $points
+     */
+    public function setPoints($points)
+    {
+        $this->points = $points;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return Athlete
+     */
+    public function getAthlete()
+    {
+        return $this->athlete;
+    }
+
+    /**
+     * @param Athlete $athlete
+     */
+    public function setAthlete($athlete)
+    {
+        $this->athlete = $athlete;
+    }
+
+    /**
+     * @return Meeting
+     */
+    public function getMeeting()
+    {
+        return $this->meeting;
+    }
+
+    /**
+     * @param Meeting $meeting
+     */
+    public function setMeeting($meeting)
+    {
+        $this->meeting = $meeting;
+    }
+
 
 }
 

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row" id="resultat">
+
+
+    <div class="hero-section">
+        <div class="hero-section-text">
+            <h1>
+                    Resultat
+
+
+            </h1>
+            <h5>18/07/2017</h5>
+        </div>
+    </div>
+
+
+
+</div>
+    <table>
+        <thead>
+        <tr>
+            <th width="200">PRENOM</th>
+            <th>NOM</th>
+            <th width="150">TEMPS</th>
+            <th width="150">POINT</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for resultat in athletes %}
+        <tr>
+            <td>{{ resultat.athlete.firstname }}</td>
+            <td>{{ resultat.athlete.lastname }}</td>
+            <td>{{ resultat.time }}</td>
+            <td>{{ resultat.points }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="css/foundation.css">
-            <link rel="stylesheet" href="css/app.css">
+            <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -14,23 +14,28 @@
         <?--------------------------------------------------------------------------------------------------------------
         ------                  Main Menu                                                                         ------
         --------------------------------------------------------------------------------------------------------------->
+
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-            <div class="title-bar-title"><a href="#">ATHLETIK</a></div>
+            <div class="title-bar-title"><a href="{{ path('homepage') }}">ATHLETIK</a></div>
         </div>
 
         <div class="top-bar" id="main-menu">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li ><a class="menu-text" href="#">HOME</a></li>
+                    <li ><a class="menu-text" href="{{ path('homepage') }}">HOME</a></li>
                     {% if app.user %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
                         <li><a href="#">m'inscrire à une course</a></li>
                         <li>
                             <a href="#">resultat</a>
                             <ul class="menu vertical">
-                                <li><a href="#">par course</a></li>
-                                <li><a href="#">classement general</a></li>
+                                <li><a href="{{ path('resultatCourse') }}">par course</a>
+                                    <ul class="menu vertical">
+                                        {{ render(controller('AppBundle:Default:Menu')) }}
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('classement') }}">classement general</a></li>
                             </ul>
                         </li>
                     {%  else %}
@@ -39,8 +44,12 @@
                         <li>
                             <a href="#">resultat</a>
                             <ul class="menu vertical">
-                                <li><a href="#">par course</a></li>
-                                <li><a href="#">classement general</a></li>
+                                <li><a href="{{ path('resultatCourse') }}">par course</a>
+                                    <ul class="menu vertical">
+                                        {{ render(controller('AppBundle:Default:Menu')) }}
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('classement') }}">classement general</a></li>
                             </ul>
                         </li>
                     {% endif %}
@@ -54,10 +63,10 @@
     {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="js/vendor/jquery.js"></script>
-            <script src="js/vendor/what-input.js"></script>
-            <script src="js/vendor/foundation.js"></script>
-            <script src="js/app.js"></script>
+            <script src="{{ asset('js/vendor/jquery.js') }}"></script>
+            <script src="{{ asset('js/vendor/what-input.js') }}"></script>
+            <script src="{{ asset('js/vendor/foundation.js') }}"></script>
+            <script src="{{ asset('js/app.js') }}"></script>
         {% endblock %}
     </body>
 </html>
