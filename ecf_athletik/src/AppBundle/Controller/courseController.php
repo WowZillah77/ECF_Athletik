@@ -14,10 +14,12 @@ class courseController extends Controller
      */
     public function ResultatCourseAction( Request $request)
     {
+
+        $id=$request->query->get('id');
         $em = $this->getDoctrine()->getManager();
         $meetingName = $em->getRepository("AppBundle:Meeting")->findAll();
         $repository=$em->getRepository("AppBundle:Result");
-        $athletes = $repository->findBy( array('meeting'=> '1'), array('points'=>'DESC'));
+        $athletes = $repository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
 
         return $this->render('page/resultatCourse.html.twig',['result'=>$meetingName, 'athletes'=>$athletes]);
 

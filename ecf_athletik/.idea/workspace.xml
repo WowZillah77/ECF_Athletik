@@ -16,7 +16,7 @@
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="48" column="90" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="90" />
+              <caret line="48" column="90" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -92,21 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courseController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="courseController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/courseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="78" lean-forward="false" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="78" />
+            <state relative-caret-position="340">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
               </folding>
@@ -134,11 +134,11 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Result.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Meeting.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Athlete.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/courseController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/page/resultatCourse.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/page/menucourse.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/courseController.php" />
       </list>
     </option>
   </component>
@@ -470,12 +470,12 @@
       <option name="presentableId" value="Default" />
       <updated>1500365054976</updated>
       <workItem from="1500365060445" duration="15660000" />
-      <workItem from="1500444555275" duration="22225000" />
+      <workItem from="1500444555275" duration="23811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37885000" />
+    <option name="totallyTimeSpent" value="39471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1918" height="1056" extended-state="0" />
@@ -629,7 +629,7 @@
         <state relative-caret-position="540">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <element signature="e#69#111#0#PHP" expanded="true" />
+            <element signature="e#69#111#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -639,16 +639,6 @@
         <state relative-caret-position="440">
           <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/courseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="78" lean-forward="false" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="78" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,7 +693,7 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
-          <caret line="48" column="90" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="90" />
+          <caret line="48" column="90" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -711,8 +701,18 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/courseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
