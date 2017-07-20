@@ -3,46 +3,39 @@
 {% block body %}
     <div class="row" id="classement">
 
-
         <div class="hero-section">
             <div class="hero-section-text">
-                <h1>Classement</h1>
-                <h5>18/07/2017</h5>
+                <h1>CLASSEMENT</h1>
+                <h5>GENERAL</h5>
             </div>
         </div>
 
 
 
     </div>
+    <div class="row" id="table">
+        <div class="large-12 columns">
     <table>
         <thead>
         <tr>
-            <th width="200">NOM</th>
-            <th>Temps</th>
-            <th width="150">points</th>
-            <th width="150">????</th>
+            <th width="200">PRENOM</th>
+            <th width="150">NOM</th>
+            <th width="150">TOTAL DES POINTS</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>Jean Claude Duss</td>
-            <td>Time goes there</td>
-            <td>Points goes there</td>
-            <td>bullshit goes there</td>
-        </tr>
+            {% for resultat in classement %}
         <tr>
-            <td>Bibi Lafrite</td>
-            <td>Time goes there</td>
-            <td>Points goes there</td>
-            <td>bullshit goes there</td>
+            <td>{{ resultat.firstname }}</td>
+            <td>{{ resultat.lastname }}</td>
+            <td>{{ resultat.total }}</td>
         </tr>
-        <tr>
-            <td>Sidharta gautama</td>
-            <td>Time goes there</td>
-            <td>Points goes there</td>
-            <td>bullshit goes there</td>
-        </tr>
+        {% endfor %}
+
         </tbody>
     </table>
+        </div>
+    </div>
 
 {% endblock %}

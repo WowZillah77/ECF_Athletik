@@ -6,23 +6,22 @@
 
     <div class="hero-section">
         <div class="hero-section-text">
-            <h1>
-                    Resultat
-
-
-            </h1>
-            <h5>18/07/2017</h5>
+           {% for meeting in result %}
+            <h1>{{ meeting.name }}</h1>
+            <h5>{{ meeting.date|date('d-m-Y') }}</h5>
+            {% endfor %}
         </div>
     </div>
 
 
 
 </div>
+    <div class="row" id="table">
     <table>
         <thead>
         <tr>
             <th width="200">PRENOM</th>
-            <th>NOM</th>
+            <th width="200">NOM</th>
             <th width="150">TEMPS</th>
             <th width="150">POINT</th>
         </tr>
@@ -39,5 +38,6 @@
 
         </tbody>
     </table>
+    </div>
 
 {% endblock %}
