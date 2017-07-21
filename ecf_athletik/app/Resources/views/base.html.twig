@@ -23,7 +23,7 @@
         <div class="top-bar" id="main-menu">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li ><a class="menu-text" href="{{ path('homepage') }}">HOME</a></li>
+                    <li ><a class="menu-text" href="{{ path('homepage') }}"><img id="logo" src="{{ asset('img/logo_top.png') }}"></a></li>
                     {% if app.user %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
                         <li><a href="#">m'inscrire à une course</a></li>
