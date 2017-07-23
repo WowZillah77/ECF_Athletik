@@ -28,13 +28,5 @@ class DefaultController extends Controller
         return $this->render('page/menucourse.html.twig',['menucourse'=>$meetingmenu]);
     }
 
-    public function MainMenuAction(Request $request)
-    {
-        {% if is_granted('ROLE_ADMIN') %}
-        {% else if is_granted('ROLE_USER') %}
-
-        {% else %}
-        {%endif%}
-    }
 }
 
