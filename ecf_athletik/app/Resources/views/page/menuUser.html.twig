@@ -1,0 +1,13 @@
+<li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
+<li><a href="#">m'inscrire à une course</a></li>
+<li>
+    <a href="#">resultat</a>
+    <ul class="menu vertical">
+        <li><a href="{{ path('resultatCourse') }}">par course</a>
+            <ul class="menu vertical">
+                {{ render(controller('AppBundle:Default:Menu')) }}
+            </ul>
+        </li>
+        <li><a href="{{ path('classement') }}">classement general</a></li>
+    </ul>
+</li>

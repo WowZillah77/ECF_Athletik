@@ -20,18 +20,18 @@
             <div class="title-bar-title"><a href="{{ path('homepage') }}">ATHLETIK</a></div>
         </div>
 
-        <div class="top-bar" id="main-menu">
+        <div class="top-bar" id="main-menu" data-animate="hinge-in-from-top hinge-out-from-top">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li ><a class="menu-text" href="{{ path('homepage') }}"><img id="logo" src="{{ asset('img/logo_top.png') }}"></a></li>
                     {% if app.user %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
-                        <li><a href="#">m'inscrire à une course</a></li>
+                        <li><a href="{{ path('inscription') }}">m'inscrire à une course</a></li>
                         <li>
                             <a href="#">resultat</a>
-                            <ul class="menu vertical">
+                            <ul class="vertical menu accordion-menu" data-accordion-menu>
                                 <li><a href="{{ path('resultatCourse') }}">par course</a>
-                                    <ul class="menu vertical">
+                                    <ul class="vertical menu accordion-menu" data-accordion-menu>
                                         {{ render(controller('AppBundle:Default:Menu')) }}
                                     </ul>
                                 </li>
@@ -43,9 +43,9 @@
                         <li><a href="{{ path('fos_user_registration_register') }}">register</a></li>
                         <li>
                             <a href="#">resultat</a>
-                            <ul class="menu vertical">
+                            <ul class="vertical menu accordion-menu" data-accordion-menu>
                                 <li><a href="{{ path('resultatCourse') }}">par course</a>
-                                    <ul class="menu vertical">
+                                    <ul class="vertical menu accordion-menu" data-accordion-menu>
                                         {{ render(controller('AppBundle:Default:Menu')) }}
                                     </ul>
                                 </li>

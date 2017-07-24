@@ -1,0 +1,8 @@
+<label>quelle course?
+    <form>
+    <select id="select">
+        {% for meeting in meeting%}
+        <option value={{ meeting.id }}>{{ meeting.name }}&nbsp;{{ meeting.date|date('d-m-Y') }}</option>
+        {% endfor %}
+    </select>
+</label>

@@ -30,11 +30,7 @@ class DefaultController extends Controller
 
     public function MainMenuAction(Request $request)
     {
-        {% if is_granted('ROLE_ADMIN') %}
-        {% else if is_granted('ROLE_USER') %}
 
-        {% else %}
-        {%endif%}
     }
 }
 
