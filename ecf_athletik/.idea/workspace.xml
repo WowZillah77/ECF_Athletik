@@ -22,20 +22,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="34" />
+            <state relative-caret-position="306">
+              <caret line="17" column="75" lean-forward="true" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="18">
               <caret line="22" column="85" lean-forward="false" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
               <folding />
             </state>
@@ -65,7 +65,7 @@
       <file leaf-file-name="Athlete.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Athlete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
+            <state relative-caret-position="1368">
               <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding />
             </state>
@@ -95,13 +95,13 @@
         <option value="$PROJECT_DIR$/app/Resources/views/page/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
         <option value="$PROJECT_DIR$/web/css/app.css" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/adminController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
       </list>
     </option>
   </component>
@@ -133,7 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,6 +323,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -426,12 +426,13 @@
       <workItem from="1500531597007" duration="21478000" />
       <workItem from="1500617782355" duration="10017000" />
       <workItem from="1500657948118" duration="1312000" />
-      <workItem from="1500827603370" duration="455000" />
+      <workItem from="1500827603370" duration="1051000" />
+      <workItem from="1500830434637" duration="206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74884000" />
+    <option name="totallyTimeSpent" value="75686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
@@ -441,12 +442,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -742,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
@@ -819,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Athlete.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
+        <state relative-caret-position="1368">
           <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
         </state>
@@ -827,8 +820,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
+        <state relative-caret-position="18">
           <caret line="22" column="85" lean-forward="false" selection-start-line="22" selection-start-column="85" selection-end-line="22" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="75" lean-forward="true" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
           <folding />
         </state>
       </provider>
