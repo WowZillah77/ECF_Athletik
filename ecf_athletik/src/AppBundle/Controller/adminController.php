@@ -30,7 +30,19 @@ class adminController extends Controller
         $meetingName= $meeting->findBy(array('id'=> $id));
         $repository=$em->getRepository("AppBundle:Result");
         $athletes = $repository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
+            if ($request->isXmlHttpRequest()){
+                $time=$request->get('time');
+                $points=$request->get('points');
+                $athleteid=$request->get('athleteid');
+                $meetingid=$request->get('meetingid');
+/* find object athlete and meeting before sending it */
+        $user=$repository->findOneBy(array('athlete':);
+        $att=$user->setPoints($points);
+        $att=$user->setMeeting($meetingid);
+        $att=$user->setTime($time);
 
+
+            }
         return $this->render('page/resultAdd.html.twig',['result'=>$meetingName, 'athletes'=>$athletes]);
 
     }

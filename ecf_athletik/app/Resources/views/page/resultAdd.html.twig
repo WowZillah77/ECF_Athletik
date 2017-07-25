@@ -29,6 +29,7 @@
             <tbody>
             {% for resultat in athletes %}
                 <tr>
+                    <td class="hidden" id="meetingid">{{ resultat.meeting.id }}</td>
                     <td class="hidden" id="athleteid">{{ resultat.athlete.id }}</td>
                     <td class="hidden" id="meetingyear">{{ resultat.meeting.date|date('Y') }}</td>
                     <td class="hidden" id="athleteyear">{{ resultat.athlete.birthdate }}</td>

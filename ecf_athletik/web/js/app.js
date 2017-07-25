@@ -7,6 +7,7 @@ $(document).on("change", "#select", function() {
 });
 /* function Coeff */
 $(document).on("click", ".resultForm", function() {
+    var meetingid = document.getElementById('meetingid').innerHTML;
     var meeting = document.getElementById('meetingyear').innerHTML;
     var athlete = document.getElementById('athleteyear').innerHTML;
     var athleteid = document.getElementById('athleteid').innerHTML;
@@ -37,5 +38,12 @@ $(document).on("click", ".resultForm", function() {
     console.log(time);
     var points= Math.round((1000/time)*coeff);
     document.getElementById("point"+id).innerHTML=points;
+    $.ajax({
 
+        url: '',
+        type: 'POST',
+        data:{time : time, points:points, athleteid: athleteid, meetingid: meetingid}
+
+
+    });
 });
