@@ -74,6 +74,7 @@ class courseController extends Controller
     public function NewRunnerAction(Request $request)
     {
         $athleteid =$this->getUser()->getAthlete();
+        $id=$this->getUser()->getId();
         if (!$athleteid) {
             /* create a new runner*/
             $Athlete = new Athlete();
@@ -105,15 +106,47 @@ class courseController extends Controller
                 $user->setAthlete($athletic);
                 $em->persist($user);
                 $em->flush();
-                return $this->render('/page/RegisterCourse.html.twig', ['firstname' => $fname, 'lastname' => $lname]);
+                $id=$this->getUser()->getId();
+                return $this->render('/page/RegisterCourse.html.twig', ['firstname' => $fname, 'lastname' => $lname, 'id'=>$id]);
             }
             return $this->render('/page/RegisterRunner.html.twig', [
                 'AthleteType' => $form->createView()
             ]);
         }
+        $em = $this->getDoctrine()->getManager();
+        $query=$em->createQuery(
+                                'SELECT i FROM AppBundle:Athlete i Where i.id=:Athleteid'
+        )->setParameter('Athleteid', $athleteid);
+        $Athlete=$query->getSingleResult();
+        $fname=$Athlete->getFirstname();
+        $lname=$Athlete->getLastname();
+        return $this->render('/page/RegisterCourse.html.twig', ['firstname' => $fname, 'lastname' => $lname, 'id'=>$id, 'athlete'=>$Athlete]);
+    }
 
 
-        return $this->render('/page/RegisterCourse.html.twig', ['athleteid'=> $athleteid]);
+
+/* send that runner has registered to the race to BDD */
+    /**
+     * @route("/signedup/{id}", name="signedUp")
+     * @method({"POST"})
+     */
+    public function signedUpAction(Request $request, $id)
+    {
+        $user = $this->getUser()->getAthlete();
+        $em = $this->getDoctrine()->getManager();
+        $query=$em->createQuery(
+            'SELECT i FROM AppBundle:Meeting i Where i.id=:meetingid'
+        )->setParameter('meetingid', $id);
+        $meeting=$query->getSingleResult();
+        $result=new Result();
+        $result->setMeeting($meeting);
+        $result->setAthlete($user);
+        $result->setTime(0);
+        $result->setPoints(0);
+        $em->persist($result);
+        $em->flush();
+
+        return $this->render('/page/signedup.html.twig');
     }
 
 
@@ -130,18 +163,6 @@ class courseController extends Controller
             'SELECT r FROM AppBundle:Meeting r 
              WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
         $meeting=$query->getResult();
-        return $this->render('page/meetingSelect.html.twig',['meeting'=>$meeting]);
-
-    }
-    /**
-     * @route("/Inscription", name="inscription")
-     * @method({"POST"})
-     */
-
-    public function RegisterCourseAction(Request $request){
-       if(){
-
-       }
         return $this->render('page/meetingSelect.html.twig',['meeting'=>$meeting]);
 
     }

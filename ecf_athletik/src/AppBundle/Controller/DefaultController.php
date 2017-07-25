@@ -16,24 +16,16 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $meetingmenu = $em->getRepository("AppBundle:Meeting")->findAll();
-        return $this->render('page/index.html.twig',['menucourse'=>$meetingmenu]);
-
+        return $this->render('page/index.html.twig', ['menucourse' => $meetingmenu]);
 
 
     }
+
     public function MenuAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $meetingmenu = $em->getRepository("AppBundle:Meeting")->findAll();
-        return $this->render('page/menucourse.html.twig',['menucourse'=>$meetingmenu]);
+        return $this->render('page/menucourse.html.twig', ['menucourse' => $meetingmenu]);
     }
-
-<<<<<<< HEAD
-    public function MainMenuAction(Request $request)
-    {
-
-    }
-=======
->>>>>>> 37c2fe16a2ed19f557644d9c65e96c4cebb4220c
 }
 

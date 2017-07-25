@@ -1,6 +1,6 @@
 $(document).foundation()
 
-var slideIndex = 0;
+/*var slideIndex = 0;
 carousel();
 
 function carousel() {
@@ -13,4 +13,9 @@ function carousel() {
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+}*/
+
+$(document).on("change", "#select", function() {
+    $("#selectcourse").attr( "action","/signedup/"+$(this).val() );
+});
+

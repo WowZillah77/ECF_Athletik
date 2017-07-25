@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+<h2>{{ firstname }}&nbsp{{ lastname }}&nbsp Which race do you want to compete in?</h2>
 
 {{ render(controller('AppBundle:course:SelectCourse')) }}
     <input type="submit">
