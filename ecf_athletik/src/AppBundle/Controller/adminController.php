@@ -23,8 +23,27 @@ class adminController extends Controller
      */
     public function PointsAddAction(Request $request)
     {
-        return $this->render('page/resultAdd.html.twig');
+
+        $id=$request->query->get('id');
+        $em = $this->getDoctrine()->getManager();
+        $meeting = $em->getRepository("AppBundle:Meeting");
+        $meetingName= $meeting->findBy(array('id'=> $id));
+        $repository=$em->getRepository("AppBundle:Result");
+        $athletes = $repository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
+
+        return $this->render('page/resultAdd.html.twig',['result'=>$meetingName, 'athletes'=>$athletes]);
 
     }
 
+
+    /**
+     * @Route("/temps", name="courseTemps")
+     */
+    public function CourseTempsAction(Request $request)
+    {
+
+
+        return $this->render('page/courseTemps.html.twig');
+
+    }
 }

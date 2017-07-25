@@ -24,7 +24,27 @@
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li ><a class="menu-text" href="{{ path('homepage') }}"><img id="logo" src="{{ asset('img/logo_top.png') }}"></a></li>
-                    {% if app.user %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
+                        <li><a href="{{ path('inscription') }}">m'inscrire à une course</a></li>
+                        <li>
+                            <a href="#">resultat</a>
+                            <ul class="vertical menu accordion-menu" data-accordion-menu>
+                                <li><a href="{{ path('resultatCourse') }}">par course</a>
+                                    <ul class="vertical menu accordion-menu" data-accordion-menu>
+                                        {{ render(controller('AppBundle:Default:Menu')) }}
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('classement') }}">classement general</a></li>
+                                <li><a href="{{ path('new_Race') }}">Ajouter une course</a></li>
+                            </ul>
+                        </li> <li><a href="{{ path('resultatCourse') }}">ajouter des resultats</a>
+                        <ul class="vertical menu accordion-menu" data-accordion-menu>
+                            {{ render(controller('AppBundle:Default:Menuresult')) }}
+                        </ul>
+                    </li>
+
+                    {% elseif app.user %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
                         <li><a href="{{ path('inscription') }}">m'inscrire à une course</a></li>
                         <li>

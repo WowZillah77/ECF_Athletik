@@ -29,18 +29,17 @@
             <tbody>
             {% for resultat in athletes %}
                 <tr>
-                    <td class="hidden" id="athleteid">{{ resultat.athlete.id }}</td>
-                    <td class="hidden" id="meetingyear">{{ resultat.meeting.date|date('Y') }}</td>
-                    <td class="hidden" id="athleteyear">{{ resultat.athlete.birthdate }}</td>
                     <td>{{ resultat.athlete.firstname }}</td>
                     <td>{{ resultat.athlete.lastname }}</td>
-                    <td><form method="post" id="{{ resultat.athlete.id }}" class="resultForm"><input type="text" id="time{{ resultat.athlete.id }}" placeholder={{ resultat.time }}><input id="time" type="button"></form></td>
-                    <td id="point{{ resultat.athlete.id }}"></td>
+                    <td>{{ resultat.time }}</td>
+                    <td>{{ resultat.points }}</td>
                 </tr>
             {% endfor %}
 
             </tbody>
         </table>
     </div>
+
+{% endblock %}
 
 {% endblock %}
