@@ -28,9 +28,12 @@ class DefaultController extends Controller
         return $this->render('page/menucourse.html.twig',['menucourse'=>$meetingmenu]);
     }
 
+<<<<<<< HEAD
     public function MainMenuAction(Request $request)
     {
 
     }
+=======
+>>>>>>> 37c2fe16a2ed19f557644d9c65e96c4cebb4220c
 }
 
