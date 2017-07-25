@@ -5,7 +5,7 @@ $(document).foundation()
 $(document).on("change", "#select", function() {
     $("#selectcourse").attr( "action","/signedup/"+$(this).val() );
 });
-/* function Coeff */
+/* function Coeff and calculation of the points*/
 $(document).on("click", ".resultForm", function() {
     var meetingid = document.getElementById('meetingid').innerHTML;
     var meeting = document.getElementById('meetingyear').innerHTML;

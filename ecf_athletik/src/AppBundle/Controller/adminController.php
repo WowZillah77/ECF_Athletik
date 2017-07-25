@@ -36,12 +36,19 @@ class adminController extends Controller
                 $athleteid=$request->get('athleteid');
                 $meetingid=$request->get('meetingid');
 /* find object athlete and meeting before sending it */
-        $user=$repository->findOneBy(array('athlete':);
+                $em = $this->getDoctrine()->getManager();
+                $user=$repository->findOneBy(array('athlete'=>$athleteid));
+
+        $meeting = $em->getRepository("AppBundle:Meeting");
+        $meetingObject= $meeting->findBy(array('id'=> $meetingid));
+        $runner=$em->getRepository("AppBundle:Athlete");
+        $athleteObject=$runner->findBy(array('id'=>$athleteid));
+        $att=$user->setAthlete($athleteObject);
         $att=$user->setPoints($points);
-        $att=$user->setMeeting($meetingid);
+        $att=$user->setMeeting($meetingObject);
         $att=$user->setTime($time);
-
-
+                $em->persist($att);
+                $em->flush();
             }
         return $this->render('page/resultAdd.html.twig',['result'=>$meetingName, 'athletes'=>$athletes]);
 
