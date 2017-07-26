@@ -1,11 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    {{ form_start(MeetingType) }}
-    {{ form_widget(MeetingType) }}
-    {{ form_end(MeetingType) }}
-
+    <div class="row " id="cardvert">
+        <div class="large-4 large-offset-3 columns ">
+            <div class="card " style="width: 50vh;">
+                <div class="card-divider">
+                    <h4>Add a Meeting</h4>
+                </div>
+                <div class="card-section">
+                {{ form_start(MeetingType) }}
+                {{ form_widget(MeetingType) }}
+                {{ form_end(MeetingType) }}
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 {% endblock %}

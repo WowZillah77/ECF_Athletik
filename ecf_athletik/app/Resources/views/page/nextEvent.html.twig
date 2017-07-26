@@ -1,0 +1,28 @@
+<div class="callout primary">
+    <h5 class="text-right">nos prochaines courses</h5>
+</div>
+<div class="row">
+
+    {% for meeting in nextmeeting %}
+    <div class="large-4 columns">
+
+            <div class="card" >
+                <img src="{{ asset('img/run.jpg') }}">
+                <div class="card-divider stat">
+                    <h5>{{ meeting.name }}</h5>
+                </div>
+
+                <div class="card-section ">
+                    {{ meeting.date|date('d-m-Y') }}
+                </div>
+                <div class="card-divider">
+                    <dl>
+                        <dt>info:</dt>
+                        <dd> {{ meeting.description }} </dd>
+                    </dl>
+                </div>
+            </div>
+
+    </div>
+    {% endfor %}
+</div>

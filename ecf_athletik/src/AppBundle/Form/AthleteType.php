@@ -2,7 +2,9 @@
 
 namespace AppBundle\Form;
 
+use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -17,7 +19,7 @@ class AthleteType extends AbstractType
         $builder
             ->add('firstname')
             ->add('lastname')
-            ->add('birthdate')
+            ->add('birthdate', NumberType::class, array('attr'=> array('min'=>1939, 'max'=>2050)))
             ->add('submit', SubmitType::class, array(
                 'attr' => array('class' => 'hollow button')));
     }

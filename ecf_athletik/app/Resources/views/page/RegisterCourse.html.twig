@@ -1,8 +1,18 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<h2>{{ firstname }}&nbsp{{ lastname }}&nbsp Which race do you want to compete in?</h2>
+<div class="row " id="cardvert">
+    <div class="large-6 large-offset-1 columns ">
+        <div class="card " style="width:80vh;">
+            <div class="card-divider">
+                <h4>{{ firstname }}&nbsp{{ lastname }}&nbsp Which race do you want to compete in?</h4>
+            </div>
+            <div class="card-section">
 
 {{ render(controller('AppBundle:course:SelectCourse')) }}
     <input type="submit">
     </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

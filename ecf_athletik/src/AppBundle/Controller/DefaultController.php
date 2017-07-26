@@ -39,5 +39,15 @@ class DefaultController extends Controller
         return $this->render('page/menuresult.html.twig', ['menucourse' => $meeting]);
     }
 
+    public function NextEventAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $query=$em->createQuery(
+            'SELECT r FROM AppBundle:Meeting r 
+             WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
+        $meeting=$query->getResult();
+        return $this->render('page/nextEvent.html.twig', ['nextmeeting' => $meeting]);
+    }
+
 }
 
