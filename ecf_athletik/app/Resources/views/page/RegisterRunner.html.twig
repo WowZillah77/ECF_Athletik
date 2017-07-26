@@ -1,10 +1,17 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-
-    register runner
-
-    {{ form_start(AthleteType) }}
-    {{ form_widget(AthleteType) }}
-    {{ form_end(AthleteType) }}
-
+    <div class="row " id="cardvert">
+        <div class="large-4 large-offset-3 columns ">
+    <div class="card " style="width: 50vh;">
+        <div class="card-divider">
+            <h4>register runner</h4>
+        </div>
+        <div class="card-section">
+            {{ form_start(AthleteType) }}
+            {{ form_widget(AthleteType) }}
+            {{ form_end(AthleteType) }}
+        </div>
+    </div>
+    </div>
+</div>
 {% endblock %}

@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
+
             <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
             <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {% endblock %}
@@ -17,16 +18,16 @@
 
         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
             <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-            <div class="title-bar-title"><a href="{{ path('homepage') }}">ATHLETIK</a></div>
+            <div class="title-bar-title"  ><a href="{{ path('homepage') }}" >ATHLETIK</a></div>
         </div>
 
         <div class="top-bar" id="main-menu" data-animate="hinge-in-from-top hinge-out-from-top">
             <div class="top-bar-left">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li ><a class="menu-text" href="{{ path('homepage') }}"><img id="logo" src="{{ asset('img/logo_top.png') }}"></a></li>
+                    <li ><a class="menu-text" href="{{ path('homepage') }}" ><img id="logo" src="{{ asset('img/logo_top.png') }}"></a></li>
                     {% if is_granted('ROLE_ADMIN') %}
                         <li><a href="{{ path('fos_user_security_logout') }}">Deconnection</a></li>
-                        <li><a href="{{ path('inscription') }}">m'inscrire à une course</a></li>
+                        <li ><a href="{{ path('inscription') }}"  >m'inscrire à une course</a></li>
                         <li>
                             <a href="#">resultat</a>
                             <ul class="vertical menu accordion-menu" data-accordion-menu>

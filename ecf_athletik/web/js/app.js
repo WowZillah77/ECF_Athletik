@@ -2,11 +2,11 @@ $(document).foundation()
 
 
 /* function Select course*/
-$(document).on("change", "#select", function() {
+$(document).on("click", "#select", function() {
     $("#selectcourse").attr( "action","/signedup/"+$(this).val() );
 });
 /* function Coeff and calculation of the points*/
-$(document).on("click", ".resultForm", function() {
+$(document).on("change", ".resultForm", function() {
     var meetingid = document.getElementById('meetingid').innerHTML;
     var meeting = document.getElementById('meetingyear').innerHTML;
     var athlete = document.getElementById('athleteyear').innerHTML;
