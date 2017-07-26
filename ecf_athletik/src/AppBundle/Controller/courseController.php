@@ -48,6 +48,15 @@ class courseController extends Controller
 
     }
 
+    public function SelectCourseAction(Request $request){
+           $em = $this->getDoctrine()->getManager();
+              $query=$em->createQuery(
+                'SELECT r FROM AppBundle:Meeting r 
+            WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
+              $meeting=$query->getResult();
+             return $this->render('page/meetingSelect.html.twig',['meeting'=>$meeting]);
+
+  }
 
 
 

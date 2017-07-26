@@ -8,17 +8,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\MeetingType;
+use AppBundle\Entity\Meeting;
 
 class adminController extends Controller
 {
-    /**
-     * @Route("/ajouter", name="courseadd")
-     */
-    public function CourseAddAction(Request $request)
-    {
-        return $this->render('page/courseAdd.html.twig');
 
-    }
+    /*----------------------------------------------------*
+     *         Add Points and time                        *
+     * -------------------------------------------------- */
+
 
     /**
      * @Route("/resultatTemp", name="Addpoints")
@@ -66,23 +64,38 @@ class adminController extends Controller
 
     }
 
+    /*----------------------------------------------------*
+     *         create a race                              *
+     * -------------------------------------------------- */
+
     /**
      * @route("/newrace/", name="new_Race")
      * @method({"POST"})
      */
     public function NewRaceAction(Request $request){
-        $race = new Meeting();
-        $form = $this ->createForm(MeetingType::class, $race);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($race);
-            $em->flush();
-            return $this->render('/page/index.html.twig');
+
+        /* create a new meeting object */
+                $race = new Meeting();
+
+        /* create the form for the object*/
+                $form = $this ->createForm(MeetingType::class, $race);
+                $form->handleRequest($request);
+
+        /*check if the form is valid and submitted*/
+                if ($form->isSubmitted() && $form->isValid()){
+
+            /*send the new meeting object to BDD*/
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($race);
+                $em->flush();
+
+            /*return to index*/
+                return $this->render('/page/index.html.twig');
         }
-        return $this->render('/page/courseAdd.html.twig', [
-            'MeetingType'=>$form->createView()
-        ]);
+        /* render the form*/
+                return $this->render('/page/courseAdd.html.twig', [
+                'MeetingType'=>$form->createView()
+                ]);
     }
 
 
