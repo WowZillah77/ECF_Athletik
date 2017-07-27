@@ -14,8 +14,6 @@
         </div>
 
 
-
-    </div>
     <div class="row " id="table">
         <table class="stacked-for-small hover">
             <thead>
@@ -27,21 +25,26 @@
             </tr>
             </thead>
             <tbody>
+            {% set line=1 %}
             {% for resultat in athletes %}
-                <tr>
-                    <td class="hidden" id="meetingid">{{ resultat.meeting.id }}</td>
-                    <td class="hidden" id="athleteid">{{ resultat.athlete.id }}</td>
-                    <td class="hidden" id="meetingyear">{{ resultat.meeting.date|date('Y') }}</td>
-                    <td class="hidden" id="athleteyear">{{ resultat.athlete.birthdate }}</td>
+                <tr id="{{ line }}">
+                    <td  class=" hidden lineid">{{ line }}</td>
+                    <td class=" hidden meetingid">{{ resultat.meeting.id }}</td>
+                    <td class=" hidden athleteid">{{ resultat.athlete.id }}</td>
+                    <td class=" hidden meetingyear">{{ resultat.meeting.date|date('Y') }}</td>
+                    <td class=" hidden athleteyear">{{ resultat.athlete.birthdate }}</td>
                     <td>{{ resultat.athlete.firstname }}</td>
                     <td>{{ resultat.athlete.lastname }}</td>
-                    <td><form method="post" id="{{ resultat.athlete.id }}" class="resultForm"><input type="text" id="time{{ resultat.athlete.id }}" placeholder={{ resultat.time }}><input id="time" type="button"></form></td>
-                    <td id="point{{ resultat.athlete.id }}"></td>
+                    <td><form method="post" id="{{ resultat.athlete.id }}" class="resultForm"><input type="text" class="time" placeholder={{ resultat.time }}></form></td>
+                    <td class="classpoint" id="point{{ resultat.athlete.id }}">{{ resultat.points }} </td>
                 </tr>
+                {%  set line=line+1 %}
             {% endfor %}
+
 
             </tbody>
         </table>
     </div>
+
 
 {% endblock %}

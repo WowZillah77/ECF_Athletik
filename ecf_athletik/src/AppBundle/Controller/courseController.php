@@ -1,7 +1,6 @@
 <?php
 
 namespace AppBundle\Controller;
-
 use AppBundle\AppBundle;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -24,12 +23,12 @@ class courseController extends Controller
 
         $id=$request->query->get('id');
         $em = $this->getDoctrine()->getManager();
-        $meeting = $em->getRepository("AppBundle:Meeting");
-        $meetingName= $meeting->findBy(array('id'=> $id));
-        $repository=$em->getRepository("AppBundle:Result");
-        $athletes = $repository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
+        $meetingRepository = $em->getRepository("AppBundle:Meeting");
+        $meetingObject= $meetingRepository->findBy(array('id'=> $id));
+        $resultRepository=$em->getRepository("AppBundle:Result");
+        $athleteObject = $resultRepository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
 
-        return $this->render('page/resultatCourse.html.twig',['result'=>$meetingName, 'athletes'=>$athletes]);
+        return $this->render('page/resultatCourse.html.twig',['result'=>$meetingObject, 'athletes'=>$athleteObject]);
 
     }
     /**
@@ -41,9 +40,9 @@ class courseController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $sql='SELECT SUM(result.points) as total, athlete.lastname, athlete.firstname FROM result inner join athlete on result.athlete_id = athlete.id inner join meeting on result.meeting_id = meeting.id WHERE YEAR(CURRENT_DATE()) = 2017 GROUP BY athlete.id ORDER BY total DESC 
-';      $toto=$em->getConnection()->prepare($sql);
-        $toto->execute();
-        $resultat=$toto->fetchAll();
+';      $prepare=$em->getConnection()->prepare($sql);
+        $prepare->execute();
+        $resultat=$prepare->fetchAll();
         return $this->render('page/classement.html.twig',['classement'=>$resultat]);
 
     }
@@ -52,9 +51,9 @@ class courseController extends Controller
            $em = $this->getDoctrine()->getManager();
               $query=$em->createQuery(
                 'SELECT r FROM AppBundle:Meeting r 
-            WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
-              $meeting=$query->getResult();
-             return $this->render('page/meetingSelect.html.twig',['meeting'=>$meeting]);
+                 WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
+              $meetingObject=$query->getResult();
+             return $this->render('page/meetingSelect.html.twig',['meeting'=>$meetingObject]);
 
   }
 
