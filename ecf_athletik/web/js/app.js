@@ -47,7 +47,6 @@ function calcPoint() {
         var athleteid = this.parentNode.parentNode.parentNode.querySelector('.athleteid').innerHTML;
         var points = this.parentNode.parentNode.parentNode.querySelector('.classpoint').innerHTML;
         var time = this.value;
-    console.log('hellooo');
         $.ajax({
 
             url: '',

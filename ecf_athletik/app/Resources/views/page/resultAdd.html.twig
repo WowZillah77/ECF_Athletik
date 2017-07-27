@@ -25,10 +25,8 @@
             </tr>
             </thead>
             <tbody>
-            {% set line=1 %}
             {% for resultat in athletes %}
-                <tr id="{{ line }}">
-                    <td  class=" hidden lineid">{{ line }}</td>
+                <tr >
                     <td class=" hidden meetingid">{{ resultat.meeting.id }}</td>
                     <td class=" hidden athleteid">{{ resultat.athlete.id }}</td>
                     <td class=" hidden meetingyear">{{ resultat.meeting.date|date('Y') }}</td>
@@ -38,7 +36,7 @@
                     <td><form method="post" id="{{ resultat.athlete.id }}" class="resultForm"><input type="text" class="time" placeholder={{ resultat.time }}></form></td>
                     <td class="classpoint" id="point{{ resultat.athlete.id }}">{{ resultat.points }} </td>
                 </tr>
-                {%  set line=line+1 %}
+
             {% endfor %}
 
 
