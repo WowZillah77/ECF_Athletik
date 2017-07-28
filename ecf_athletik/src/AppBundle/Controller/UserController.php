@@ -17,7 +17,7 @@ use AppBundle\Entity\User;
 
 
 
-class userController extends Controller
+class UserController extends Controller
 {
 
     /**

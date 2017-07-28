@@ -13,7 +13,7 @@ use AppBundle\Form\ResultType;
 use Symfony\Component\HttpFoundation\Response;
 use DateTime;
 use AppBundle\Entity\User;
-class courseController extends Controller
+class CourseController extends Controller
 {
     /**
      * @Route("/resultat/course", name="resultatCourse")
