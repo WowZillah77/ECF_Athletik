@@ -18,7 +18,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $allMeetingObjects = $em->getRepository("AppBundle:Meeting")->findAll();
-        return $this->render('page/index.html.twig', ['menucourse' => $allMeetingObjects]);
+        return $this->render('Page/index.html.twig', ['menucourse' => $allMeetingObjects]);
 
 
     }
@@ -27,7 +27,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $allMeetingObjects= $em->getRepository("AppBundle:Meeting")->findAll();
-        return $this->render('page/menucourse.html.twig', ['menucourse' => $allMeetingObjects]);
+        return $this->render('Page/menucourse.html.twig', ['menucourse' => $allMeetingObjects]);
     }
 
     public function MenuresultAction(Request $request)
@@ -37,7 +37,7 @@ class DefaultController extends Controller
             'SELECT r FROM AppBundle:Meeting r 
              WHERE r.date <:date')->setParameter('date', new DateTime('Now'));
         $pastMeetingObject=$query->getResult();
-        return $this->render('page/menuresult.html.twig', ['menucourse' => $pastMeetingObject]);
+        return $this->render('Page/menuresult.html.twig', ['menucourse' => $pastMeetingObject]);
     }
 
     public function NextEventAction(Request $request)
@@ -47,7 +47,7 @@ class DefaultController extends Controller
             'SELECT r FROM AppBundle:Meeting r 
              WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
         $futureMeetingObjects=$query->getResult();
-        return $this->render('page/nextEvent.html.twig', ['nextmeeting' => $futureMeetingObjects]);
+        return $this->render('Page/nextEvent.html.twig', ['nextmeeting' => $futureMeetingObjects]);
     }
 
 }

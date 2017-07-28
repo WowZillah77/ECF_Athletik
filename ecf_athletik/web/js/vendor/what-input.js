@@ -112,7 +112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // boolean: true if touch buffer is active
 	  var isBuffering = false;
 
-	  // boolean: true if the page is being scrolled
+	  // boolean: true if the Page is being scrolled
 	  var isScrolling = false;
 
 	  // store current mouse position

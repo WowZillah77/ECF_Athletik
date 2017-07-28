@@ -3399,7 +3399,7 @@ var SmoothScroll = function (_Plugin) {
         }
 
         /**
-         * Function to scroll to a given location on the page.
+         * Function to scroll to a given location on the Page.
          * @param {String} loc - A properly formatted jQuery id selector. Example: '#foo'
          * @param {Object} options - The options to use.
          * @param {Function} callback - The callback function.
@@ -3460,7 +3460,7 @@ SmoothScroll.defaults = {
      */
     threshold: 50,
     /**
-     * Number of pixels to offset the scroll of the page on item click if using a sticky nav bar.
+     * Number of pixels to offset the scroll of the Page on item click if using a sticky nav bar.
      * @option
      * @type {number}
      * @default 0
@@ -3601,7 +3601,7 @@ var Tabs = function (_Plugin) {
         }
       }
 
-      //current context-bound function to open tabs on page load or history popstate
+      //current context-bound function to open tabs on Page load or history popstate
       this._checkDeepLink = function () {
         var anchor = window.location.hash;
         //need a hash and a relevant anchor in this tabset
@@ -3949,7 +3949,7 @@ Tabs.defaults = {
 
   /**
    * Allows the window to scroll to content of active pane on load if set to true.
-   * Not recommended if more than one tab panel per page.
+   * Not recommended if more than one tab panel per Page.
    * @option
    * @type {boolean}
    * @default false
@@ -6661,7 +6661,7 @@ var Magellan = function (_Plugin) {
     }
 
     /**
-     * Calculates an array of pixel values that are the demarcation lines between locations on the page.
+     * Calculates an array of pixel values that are the demarcation lines between locations on the Page.
      * Can be invoked if new elements are added or the size of a location changes.
      * @function
      */
@@ -6728,7 +6728,7 @@ var Magellan = function (_Plugin) {
     }
 
     /**
-     * Function to scroll to a given location on the page.
+     * Function to scroll to a given location on the Page.
      * @param {String} loc - a properly formatted jQuery id selector. Example: '#foo'
      * @function
      */
@@ -6765,7 +6765,7 @@ var Magellan = function (_Plugin) {
     }
 
     /**
-     * Updates the visibility of an active location link, and updates the url hash for the page, if deepLinking enabled.
+     * Updates the visibility of an active location link, and updates the url hash for the Page, if deepLinking enabled.
      * @private
      * @function
      * @fires Magellan#update
@@ -6875,14 +6875,14 @@ Magellan.defaults = {
    */
   activeClass: 'is-active',
   /**
-   * Allows the script to manipulate the url of the current page, and if supported, alter the history.
+   * Allows the script to manipulate the url of the current Page, and if supported, alter the history.
    * @option
    * @type {boolean}
    * @default false
    */
   deepLinking: false,
   /**
-   * Number of pixels to offset the scroll of the page on item click if using a sticky nav bar.
+   * Number of pixels to offset the scroll of the Page on item click if using a sticky nav bar.
    * @option
    * @type {number}
    * @default 0
@@ -7464,7 +7464,7 @@ OffCanvas.defaults = {
   transition: 'push',
 
   /**
-   * Force the page to scroll to top or bottom on open.
+   * Force the Page to scroll to top or bottom on open.
    * @option
    * @type {?string}
    * @default null
@@ -8030,7 +8030,7 @@ Orbit.defaults = {
   */
   animOutToLeft: 'slide-out-left',
   /**
-  * Allows Orbit to automatically animate on page load.
+  * Allows Orbit to automatically animate on Page load.
   * @option
    * @type {boolean}
   * @default true
@@ -9415,7 +9415,7 @@ Reveal.defaults = {
    */
   resetOnClose: false,
   /**
-   * Allows the modal to alter the url on open/close, and allows the use of the `back` button to close modals. ALSO, allows a modal to auto-maniacally open on page load IF the hash === the modal's user-set id.
+   * Allows the modal to alter the url on open/close, and allows the use of the `back` button to close modals. ALSO, allows a modal to auto-maniacally open on Page load IF the hash === the modal's user-set id.
    * @option
    * @type {boolean}
    * @default false
@@ -11208,7 +11208,7 @@ var Tooltip = function (_Positionable) {
     }
 
     /**
-     * reveals the tooltip, and fires an event to close any other open tooltips on the page
+     * reveals the tooltip, and fires an event to close any other open tooltips on the Page
      * @fires Tooltip#closeme
      * @fires Tooltip#show
      * @function
@@ -11229,7 +11229,7 @@ var Tooltip = function (_Positionable) {
       this.template.removeClass('align-top align-bottom align-left align-right align-center').addClass('align-' + this.alignment);
 
       /**
-       * Fires to close all other open tooltips on the page
+       * Fires to close all other open tooltips on the Page
        * @event Closeme#tooltip
        */
       this.$element.trigger('closeme.zf.tooltip', this.template.attr('id'));

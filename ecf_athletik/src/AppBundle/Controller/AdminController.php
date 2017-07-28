@@ -59,7 +59,7 @@ use AppBundle\Entity\Meeting;
                 $em->persist($resultline);
                 $em->flush();
             }
-            return $this->render('page/resultAdd.html.twig',['result'=>$meetingObject, 'athletes'=>$athletes]);
+            return $this->render('Page/resultAdd.html.twig',['result'=>$meetingObject, 'athletes'=>$athletes]);
 
         }
 
@@ -89,10 +89,10 @@ use AppBundle\Entity\Meeting;
                 $em->flush();
 
                 /*return to index*/
-                return $this->render('/page/index.html.twig');
+                return $this->render('/Page/index.html.twig');
             }
             /* render the form*/
-            return $this->render('/page/courseAdd.html.twig', [
+            return $this->render('/Page/courseAdd.html.twig', [
                 'MeetingType'=>$form->createView()
             ]);
         }

@@ -28,7 +28,7 @@ class courseController extends Controller
         $resultRepository=$em->getRepository("AppBundle:Result");
         $athleteObject = $resultRepository->findBy( array('meeting'=> $id), array('points'=>'DESC'));
 
-        return $this->render('page/resultatCourse.html.twig',['result'=>$meetingObject, 'athletes'=>$athleteObject]);
+        return $this->render('Page/resultatCourse.html.twig',['result'=>$meetingObject, 'athletes'=>$athleteObject]);
 
     }
     /**
@@ -43,7 +43,7 @@ class courseController extends Controller
 ';      $prepare=$em->getConnection()->prepare($sql);
         $prepare->execute();
         $resultat=$prepare->fetchAll();
-        return $this->render('page/classement.html.twig',['classement'=>$resultat]);
+        return $this->render('Page/classement.html.twig',['classement'=>$resultat]);
 
     }
 
@@ -53,7 +53,7 @@ class courseController extends Controller
                 'SELECT r FROM AppBundle:Meeting r 
                  WHERE r.date >:date')->setParameter('date', new DateTime('Now'));
               $meetingObject=$query->getResult();
-             return $this->render('page/meetingSelect.html.twig',['meeting'=>$meetingObject]);
+             return $this->render('Page/meetingSelect.html.twig',['meeting'=>$meetingObject]);
 
   }
 

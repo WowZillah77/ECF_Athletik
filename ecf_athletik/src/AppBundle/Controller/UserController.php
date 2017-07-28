@@ -47,9 +47,9 @@ class userController extends Controller
                 $em->persist($user);
                 $em->flush();
                 $id=$this->getUser()->getId();
-                return $this->render('/page/RegisterCourse.html.twig', ['firstname' => $newAthlete->getFirstname(), 'lastname' => $newAthlete->getLastname(), 'id'=>$id]);
+                return $this->render('/Page/RegisterCourse.html.twig', ['firstname' => $newAthlete->getFirstname(), 'lastname' => $newAthlete->getLastname(), 'id'=>$id]);
             }
-            return $this->render('/page/RegisterRunner.html.twig', ['AthleteType' => $form->createView()]);
+            return $this->render('/Page/RegisterRunner.html.twig', ['AthleteType' => $form->createView()]);
         }
         $em = $this->getDoctrine()->getManager();
         $query=$em->createQuery(
@@ -58,7 +58,7 @@ class userController extends Controller
         $newAthlete=$query->getSingleResult();
         $fname=$newAthlete->getFirstname();
         $lname=$newAthlete->getLastname();
-        return $this->render('/page/RegisterCourse.html.twig', ['firstname' => $fname, 'lastname' => $lname, 'id'=>$id, 'athlete'=>$newAthlete]);
+        return $this->render('/Page/RegisterCourse.html.twig', ['firstname' => $fname, 'lastname' => $lname, 'id'=>$id, 'athlete'=>$newAthlete]);
     }
 
 
@@ -84,7 +84,7 @@ class userController extends Controller
         $em->persist($result);
         $em->flush();
 
-        return $this->render('/page/signedup.html.twig');
+        return $this->render('/Page/signedup.html.twig');
     }
 
     public function SelectCourseAction(Request $request)
@@ -95,7 +95,7 @@ class userController extends Controller
                                  WHERE r.date >:date')
                                  ->setParameter('date', new DateTime('Now'));
         $futurMeeting=$query->getResult();
-        return $this->render('page/meetingSelect.html.twig',['meeting'=>$futurMeeting]);
+        return $this->render('Page/meetingSelect.html.twig',['meeting'=>$futurMeeting]);
 
     }
 
